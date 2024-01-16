@@ -1,2 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
+:root {
+    --h1-font-size: 5rem;
+    --span-font-size: 3.5rem;
+    --input-size: 25rem;
+    --input-margin: 1em;
+}
+
+@media screen and (max-width: 540px) {
+    :root {
+      --h1-font-size: 2.5rem;
+      --span-font-size: 1.75rem;
+      --input-size: 15rem;
+    }
+  }
+
+  @media screen and (max-width: 280px) {
+    :root {
+      --h1-font-size: 2rem;
+      --span-font-size: 0.75rem;
+      --input-size: 10.8rem;
+    }
+  }
+
+*,
+::after,
+::before{
+    box-sizing: border-box; /**/
+    font-family: 'Lemon', sans-serif;
+}
+.hero-container{
+    background: url(/paisaje.jpg) center/cover;
+    height: 50vh;
+    position: relative;
+}
+
+.hero-container::before{
+    content: "";
+    background-color: burlywood;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.hero-body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+body{
+    margin: 0;
+}
+
+h1{
+    margin: 0;
+    color: #000;
+    font-size: var(--h1-font-size);
+}
+span{
+    color: #000;
+    font-size: var(--span-font-size);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5%;
+    padding: 2em;
+    width: 75%;
+}
+input, textarea{
+    width: var(--input-size);
+    margin:var(--input-margin);
+    padding: 15px;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #ccc;
+}
+input[type="submit"]{
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    transition: 0.5s;
+    background-color: #fff;
+    color: #000;
+    background-color: #ccc;
+    border: none;
+}
+
+li {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+    list-style-type: none; 
+    font-size: 1.25em;
+    margin: 0.5em;
+}
+
+li::before {
+    content: "x "; 
+}
