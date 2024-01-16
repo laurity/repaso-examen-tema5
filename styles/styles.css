@@ -33,6 +33,7 @@
     background: url(/paisaje.jpg) center/cover;
     height: 50vh;
     position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
 }
 
 .hero-container::before{
@@ -78,7 +79,6 @@ span{
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 5%;
     padding: 2em;
     width: 75%;
 }

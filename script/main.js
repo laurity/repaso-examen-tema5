@@ -11,9 +11,11 @@ const id = (id) => {
 }; 
 
 let mensajeError = []
+
 function validar(e) {
     e.preventDefault() // Evita que se envíe el formulario
     mensajeError = []
+
     // Validar nombre que no esté vacío
     id("nombre").value.trim().length === 0 ? mensajeError.push("El nombre es obligatorio") : null
     id("apellido").value.trim().length === 0 ? mensajeError.push("El apellido es obligatorio") : null
@@ -28,6 +30,7 @@ function validar(e) {
     !/^[0-9]{4}\s[B-DF-HJ-NP-TV-Z]{3}$/.test(id("matricula").value.trim()) ? mensajeError.push("La matrícula no es válida") : null
     //Validar mensaje
     id("mensaje").value.trim().length < 10 ? mensajeError.push("El mensaje debe tener al menos 10 caracteres") : null
+    
     //Tratamiento del envio del mensaje
     if (mensajeError.length === 0 && confirm("¿Desea enviar el formulario?")) {
         id("formulario").submit()

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examen</title>
     <link rel="stylesheet" href="/styles/styles.css">
 </head>
+
 <body>
     <header class="hero-container">
         <div class="hero-body">
@@ -15,20 +17,20 @@
     </header>
 
     <section class="container">
-        
         <form action="envio.html" class="formulario" id="formulario" name="formulario" method="get">
-            <h1 style="color:black;">Contacto</h1>
+            <h1>Formulario</h1>
             <input type="text" name="nombre" placeholder="Nombre" class="nombre" id="nombre">
             <input type="text" name="apellido" placeholder="Apellido" class="apellido" id="apellido">
             <input type="text" name="correo" placeholder="Correo" class="correo" id="correo">
             <input type="text" name="telefono" placeholder="Telefono" class="telefono" id="telefono">
-            <input type="text" name="matricula" placeholder="Matricula" class="matricula" id="matricula">
+            <input type="text" name="matricula" placeholder="Matricula 0000 XXX" class="matricula" id="matricula">
             <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje" placeholder="Mensaje"></textarea>
             <input type="submit" value="Enviar" class="btn-enviar" id="enviar">
 
             <ul class="error" id="error"></ul>
         </form>
-        </section>
-        <script src="/script/main.js"></script>
+    </section>
+    <script src="/script/main.js"></script>
 </body>
+
 </html>
