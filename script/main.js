@@ -16,8 +16,10 @@ function validar(e) {
     mensajeError = []
     // Validar nombre que no esté vacío
     id("nombre").value.trim().length === 0 ? mensajeError.push("El nombre es obligatorio") : null
+    id("apellido").value.trim().length === 0 ? mensajeError.push("El apellido es obligatorio") : null
     // Validar que el nombre solo contenga letras
     !/^[a-zA-Z0-9]*$/.test(id("nombre").value.trim()) ? mensajeError.push("El nombre solo puede contener caracteres válidos") : null
+    !/^[a-zA-Z0-9]*$/.test(id("apellido").value.trim()) ? mensajeError.push("El apellido solo puede contener caracteres válidos") : null
     //Validar correo electrónico
     !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(id("correo").value.trim()) ? mensajeError.push("El correo electrónico no es válido") : null
     //Validar telefono español
